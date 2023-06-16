@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="699.0" prefWidth="903.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sportconnectnutritionmanagement.ParticiperController">
+   <children>
+      <ImageView fitHeight="43.0" fitWidth="407.0" layoutX="466.0" layoutY="169.0">
+         <image>
+            <Image url="@../images/342011475_6005162399593270_647872473479756221_n.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="549.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Participer à un évenement" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="486.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" />
+      <Text layoutX="486.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom" />
+      <Text layoutX="486.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telephone" />
+      <Text layoutX="486.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mail" />
+      <Button fx:id="btn" layoutX="719.0" layoutY="564.0" mnemonicParsing="false" onAction="#OnParticipe" prefHeight="43.0" prefWidth="116.0" styleClass="update-btn" stylesheets="@Back.css" text="PARTICIPER" />
+      <TextField fx:id="nom" layoutX="684.0" layoutY="264.0" prefHeight="30.0" prefWidth="187.0" styleClass="label-info" stylesheets="@Back.css" />
+      <TextField fx:id="prenom" layoutX="684.0" layoutY="308.0" prefHeight="31.0" prefWidth="187.0" styleClass="label-info" stylesheets="@Back.css" />
+      <TextField fx:id="tlf" layoutX="684.0" layoutY="351.0" prefHeight="31.0" prefWidth="187.0" styleClass="label-info" stylesheets="@Back.css" />
+      <TextField fx:id="mail" layoutX="684.0" layoutY="399.0" prefHeight="31.0" prefWidth="187.0" styleClass="label-info" stylesheets="@Back.css" />
+      <Text layoutX="484.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix" />
+      <ComboBox fx:id="activitesid" layoutX="685.0" layoutY="495.0" prefHeight="33.0" prefWidth="187.0" styleClass="label-info" stylesheets="@Back.css" />
+      <Text layoutX="484.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Activités" />
+      <TextField fx:id="prix" layoutX="684.0" layoutY="442.0" prefHeight="31.0" prefWidth="187.0" styleClass="label-info" stylesheets="@Back.css" />
+      <AnchorPane prefHeight="127.0" prefWidth="953.0" styleClass="black-bg" stylesheets="@dashboardDesignEvent.css">
+         <children>
+            <ImageView fitHeight="56.0" fitWidth="87.0" layoutX="25.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo3.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="front" layoutX="253.0" layoutY="49.0" mnemonicParsing="false" onAction="#OnFront" styleClass="navbar-btn" stylesheets="@dashboardDesign.css" text="HOME" />
+            <Button layoutX="322.0" layoutY="49.0" mnemonicParsing="false" styleClass="navbar-btn" stylesheets="@dashboardDesignEvent.css" text="ABOUT" />
+            <Button layoutX="395.0" layoutY="49.0" mnemonicParsing="false" onAction="#nutrition" styleClass="navbar-btn" stylesheets="@dashboardDesignEvent.css" text="NUTRITIF" />
+            <Button layoutX="473.0" layoutY="49.0" mnemonicParsing="false" onAction="#Blog" styleClass="navbar-btn" stylesheets="@dashboardDesignEvent.css" text="BLOG" />
+            <Circle layoutX="837.0" layoutY="64.0" radius="10.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle layoutX="868.0" layoutY="64.0" radius="10.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle layoutX="901.0" layoutY="64.0" radius="10.0" stroke="WHITE" strokeType="INSIDE" />
+             <Button fx:id="logout" layoutX="892.0" layoutY="79.0" mnemonicParsing="false" onAction="#logout" styleClass="logout" stylesheets="@dashboardDesign.css">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="2em" />
+                           </graphic>
+                           
+                        </Button>
+              
+               
+            <ImageView fitHeight="8.0" fitWidth="8.0" layoutX="314.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="830.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/342350123_253477010472007_8366978257052569142_n.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="861.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/343607648_1004322767407384_4406988683664333271_n.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="894.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/342021147_195335043321507_89404925876786338_n.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="528.0" layoutY="49.0" mnemonicParsing="false" onAction="#coach" styleClass="navbar-btn" stylesheets="@dashboardDesignEvent.css" text="COACH" />
+            <Button fx:id="admin" layoutX="595.0" layoutY="49.0" mnemonicParsing="false" onAction="#OnFront" styleClass="navbar-btn" stylesheets="@dashboardDesignEvent.css" text="EVENT" />
+            <Button fx:id="front1" layoutX="14.0" layoutY="74.0" mnemonicParsing="false" onAction="#OnFront" styleClass="navbar-btn" stylesheets="@dashboardDesign.css" text="Sport Connect" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="43.0" fitWidth="407.0" layoutX="467.0" layoutY="639.0">
+         <image>
+            <Image url="@../images/342011475_6005162399593270_647872473479756221_n.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="480.0" layoutY="652.0" text="Contact" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="749.0" layoutY="652.0" text="+216 99 801 569" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="588.0" layoutY="652.0" text="pidev96@gmail.com" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="26.0" layoutY="164.0" prefHeight="516.0" prefWidth="430.0">
+         <children>
+            <ImageView fitHeight="206.0" fitWidth="174.0" layoutX="14.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/306476890_430234669262992_7674902246585358817_n.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="206.0" fitWidth="174.0" layoutX="235.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/341994012_920186469272566_7187959840919936475_n.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="206.0" fitWidth="174.0" layoutX="235.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/343554331_978806713286407_2080675973907394137_n.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="206.0" fitWidth="174.0" layoutX="28.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/342088431_2266075110245385_6620166707707178050_n.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1106.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sportconnectnutritionmanagement.MenuController">
+    <children>
+        <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <BorderPane fx:id="bp" layoutX="233.0" layoutY="200.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <left>
+                        <AnchorPane prefHeight="555.0" prefWidth="211.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane layoutX="6.0" layoutY="96.0" prefHeight="555.0" prefWidth="211.0" styleClass="nav-form" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                       
+                                        <Label layoutX="46.0" layoutY="52.0" text="Sport" textFill="WHITE">
+                                            <font>
+                                                <Font name="Times New Roman Bold" size="36.0" />
+                                            </font>
+                                        </Label>
+                                        <Line endX="80.0" layoutX="106.0" layoutY="158.0" startX="-80.0" stroke="WHITE" />
+                                        <Button layoutX="14.0" layoutY="175.0" mnemonicParsing="false" onAction="#AjouterEq" prefHeight="24.0" prefWidth="153.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Ajouter equipement">
+                                           
+                                        </Button>
+                                        <Button layoutX="16.0" layoutY="201.0" mnemonicParsing="false" onAction="#AjouterEx" prefHeight="27.0" prefWidth="147.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Ajouter exercice">
+                                           
+                                        </Button>
+                                        <Button layoutX="16.0" layoutY="228.0" mnemonicParsing="false" onAction="#AjouterSerie" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Ajouter serie" />
+                                        <Button layoutX="16.0" layoutY="263.0" mnemonicParsing="false" onAction="#AffEquip" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Afficher equipements" />
+                                        <Button layoutX="16.0" layoutY="300.0" mnemonicParsing="false" onAction="#AffSerie" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Afficher series" />
+                                        <Button layoutX="16.0" layoutY="335.0" mnemonicParsing="false" onAction="#AffEx" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Afficher exercices">
+                                           
+                                        </Button>
+                                        <Label layoutX="26.0" layoutY="92.0" text="Connect" textAlignment="CENTER" textFill="WHITE">
+                                            <font>
+                                                <Font name="Times New Roman Bold" size="36.0" />
+                                            </font>
+                                        </Label>
+                              <Button layoutX="55.0" layoutY="496.0" mnemonicParsing="false" onAction="#OnReturn" prefHeight="20.0" prefWidth="80.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Back" />
+                                      <Button fx:id="logout" layoutX="16.0" layoutY="543.0" mnemonicParsing="false" onAction="#logout" styleClass="logout" stylesheets="@dashboardDesign.css">
+                                                  <graphic>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="2em" />
+                                                  </graphic>
+                                                  
+                                              </Button>
+                                              <Label layoutX="68.0" layoutY="549.0" text="Logout" textFill="WHITE">
+                                                  <font>
+                                                      <Font size="14.0" />
+                                                  </font>
+                                              </Label>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </left>
+               <center>
+                  <AnchorPane fx:id="AP" prefHeight="493.0" prefWidth="818.0" BorderPane.alignment="CENTER" />
+               </center>
+                    </BorderPane>
+                </children>    
+        </AnchorPane>
+    </children>
+                   
+</StackPane>

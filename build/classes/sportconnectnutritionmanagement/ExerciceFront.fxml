@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="1111.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sportconnectnutritionmanagement.ExerciceFrontController">
+   <children>
+      <ImageView fitHeight="391.0" fitWidth="1113.0" layoutX="-5.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/banner-bg.jpg" />
+         </image>
+      </ImageView>
+        <AnchorPane prefHeight="127.0" prefWidth="1113.0" styleClass="black-bg" stylesheets="@dashboardDesignEvent.css">
+       <children>
+                   <ImageView fitHeight="49.0" fitWidth="51.0" layoutX="32.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo3.png" />
+               </image></ImageView>
+            <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="799.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/342350123_253477010472007_8366978257052569142_n.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="826.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/343607648_1004322767407384_4406988683664333271_n.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="14.0" fitWidth="14.0" layoutX="856.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/342021147_195335043321507_89404925876786338_n.png" />
+               </image>
+            </ImageView>
+             <Button layoutX="159.0" layoutY="49.0" mnemonicParsing="false" styleClass="navbar-btn" stylesheets="@dashboardDesign.css" text="Home " />
+                  <Button layoutX="239.0" layoutY="49.0" mnemonicParsing="false" styleClass="navbar-btn" stylesheets="@dashboardDesign.css" text="About" />
+                  <Button layoutX="318.0" layoutY="49.0" mnemonicParsing="false" onAction="#nutrition" styleClass="navbar-btn" stylesheets="@dashboardDesign.css" text="Nutritif" />
+                  <Button layoutX="403.0" layoutY="49.0" mnemonicParsing="false" onAction="#Blog" styleClass="navbar-btn" stylesheets="@dashboardDesign.css" text="Blog" />
+                  <Button layoutX="464.0" layoutY="49.0" mnemonicParsing="false" onAction="#coach" styleClass="navbar-btn" stylesheets="@dashboardDesign.css" text="Coach" />
+                  <Button layoutX="539.0" layoutY="49.0" mnemonicParsing="false" onAction="#Event" styleClass="navbar-btn" stylesheets="@dashboardDesign.css" text="Event" />
+            <Button layoutX="854.0" layoutY="92.0" mnemonicParsing="false" onAction="#SerieFront" styleClass="navbar-btn" stylesheets="@dashboardDesign.css" text="Serie " />
+            <Button layoutX="753.0" layoutY="92.0" mnemonicParsing="false" onAction="#coach" styleClass="navbar-btn" stylesheets="@dashboardDesign.css" text="Equipement" />
+            <Button fx:id="logout" layoutX="1034.0" layoutY="66.0" mnemonicParsing="false" onAction="#logout" styleClass="logout" stylesheets="@dashboardDesign.css">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="2em" />
+                           </graphic>
+                           
+                        </Button>
+
+       </children>
+            </AnchorPane>
+      <ListView fx:id="listEquipementF" layoutX="-5.0" layoutY="211.0" orientation="HORIZONTAL" prefHeight="399.0" prefWidth="1113.0" style="-fx-background-color: #808080;" />
+   </children>
+</AnchorPane>

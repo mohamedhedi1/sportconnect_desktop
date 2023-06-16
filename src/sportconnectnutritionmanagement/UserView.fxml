@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1106.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sportconnectnutritionmanagement.UserViewController">
+    <children>
+          <BorderPane prefHeight="600.0" prefWidth="1100.0">
+              <top>
+                  <AnchorPane prefHeight="0.0" prefWidth="1106.0" styleClass="black-bg" stylesheets="@dashboardDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                                  <Button layoutX="203.0" layoutY="35.0" mnemonicParsing="false" styleClass="navbar-btn" stylesheets="@dashboardDesign.css" text="Home " />
+                  <Button layoutX="292.0" layoutY="34.0" mnemonicParsing="false" styleClass="navbar-btn" stylesheets="@dashboardDesign.css" text="About" />
+                  <Button layoutX="377.0" layoutY="31.0" mnemonicParsing="false" onAction="#Nutri" styleClass="navbar-btn" stylesheets="@dashboardDesign.css" text="Nutritif" />
+                  <Button layoutX="477.0" layoutY="32.0" mnemonicParsing="false" onAction="#Blog" styleClass="navbar-btn" stylesheets="@dashboardDesign.css" text="Blog" />
+                  <Button layoutX="581.0" layoutY="34.0" mnemonicParsing="false" onAction="#coach" styleClass="navbar-btn" stylesheets="@dashboardDesign.css" text="Coach" />
+                  <Button layoutX="689.0" layoutY="34.0" mnemonicParsing="false" onAction="#Event" styleClass="navbar-btn" stylesheets="@dashboardDesign.css" text="Event" />
+         
+                              <Button fx:id="logout" layoutX="982.0" layoutY="31.0" mnemonicParsing="false" onAction="#logout" stylesheets="@dashboardDesign.css">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="2em" />
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="logout" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </Button>
+                        <ImageView fitHeight="41.0" fitWidth="57.0" layoutX="14.0" layoutY="29.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/logo3.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <stylesheets>
+                        <URL value="@dashboardDesign.css" />
+                        <URL value="@dashboardDesignEvent.css" />
+                     </stylesheets>
+                          
+                            
+                  </AnchorPane>
+              </top>
+         <center> 
+              <AnchorPane fx:id="addRepas_form" prefHeight="615.0" prefWidth="1106.0" BorderPane.alignment="CENTER">
+                  <children>
+                      <AnchorPane fx:id="nutrition_form" layoutX="372.0" layoutY="186.0" prefHeight="591.0" prefWidth="1106.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <children>
+                              <AnchorPane layoutX="14.0" layoutY="50.0" prefHeight="538.0" prefWidth="1087.0" stylesheets="@dashboardDesign.css">
+                                  <styleClass>
+                                      <String fx:value="shadow" />
+                                      <String fx:value="white-bg" />
+                                  </styleClass>
+                                  <children>
+                              <ImageView fitHeight="523.0" fitWidth="574.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" rotate="4.1">
+                                 <image>
+                                    <Image url="@../images/456.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="528.0" fitWidth="393.0" layoutX="514.0" layoutY="16.0" pickOnBounds="true" rotate="5.2">
+                                 <image>
+                                    <Image url="@../images/headlessroggvir_some_food_photography_4K_shot_ac812f8b-8f0f-4a2f-be23-89246ae4ab97.png" />
+                                 </image>
+                              </ImageView>
+                                      <TableView fx:id="addRepas_tableView" layoutX="7.0" layoutY="41.0" prefHeight="228.0" prefWidth="859.0" stylesheets="@dashboardDesign.css">
+                                          <columns>
+                                              <TableColumn fx:id="addRepas_col_id" prefWidth="75.0" text="ID" />
+                                              <TableColumn fx:id="addRepas_col_name" prefWidth="152.00000762939453" text="Name" />
+                                              <TableColumn fx:id="addRepas_col_description" prefWidth="244.00003051757812" text="Description" />
+                                              <TableColumn fx:id="addRepas_col_heure" prefWidth="92.99996948242188" text="Heure" />
+                                              <TableColumn fx:id="addRepas_col_calories" prefWidth="123.0" text="Calories" />
+                                              <TableColumn fx:id="addRepas_col_dayofweek" prefWidth="169.0" text="Day Of Week" />
+                                          </columns>
+                                      </TableView>
+                                                
+                                                  <TableView fx:id="addIngredient_tableView" layoutX="14.0" layoutY="324.0" prefHeight="200.0" prefWidth="504.0" stylesheets="@dashboardDesign.css">
+                                          <columns>
+                                              <TableColumn fx:id="addIngredient_col_id" prefWidth="85.00003814697266" text="ID" />
+                                              <TableColumn fx:id="addIngredient_col_name" prefWidth="160.0" text="Name" />
+                                              <TableColumn fx:id="addIngredient_col_quantite" prefWidth="119.0" text="Quantite" />
+                                              <TableColumn fx:id="addIngredient_col_calories" minWidth="4.0" prefWidth="138.99996948242188" text="Calories" />
+                                          </columns>
+                                          <styleClass>
+                                              <String fx:value="table-view" />
+                                              <String fx:value="table-column" />
+                                          </styleClass>
+                                      </TableView>
+                                      <Label layoutX="14.0" layoutY="14.0" text="Table de Repas :" textFill="#fffefe">
+                                          <font>
+                                              <Font name="Times New Roman" size="18.0" />
+                                          </font>
+                                      </Label>
+                                      <Label layoutX="14.0" layoutY="291.0" text="Table d'Ingredient :" textFill="#fffefe">
+                                          <font>
+                                              <Font name="Times New Roman" size="18.0" />
+                                          </font>
+                                      </Label>
+                                      <WebView fx:id="webViewQR" contextMenuEnabled="false" layoutX="866.0" layoutY="324.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@dashboardDesign.css">
+                                          <styleClass>
+                                              <String fx:value="white-bg" />
+                                              <String fx:value="shadow" />
+                                          </styleClass>
+                                      </WebView>
+                                      <Label layoutX="930.0" layoutY="291.0" text="Visit US :">
+                                          <font>
+                                              <Font name="Times New Roman" size="18.0" />
+                                          </font>
+                                      </Label>
+                                  </children>
+                              </AnchorPane>
+                          </children>
+                      </AnchorPane>
+               </children>
+            </AnchorPane>
+                  
+               </center>
+         <bottom>
+            <AnchorPane prefHeight="32.0" prefWidth="1106.0" styleClass="black-bg" stylesheets="@dashboardDesignEvent.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="#fcf9f9" layoutX="24.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SportConnect" />
+                  <Text fill="#fcf9f9" layoutX="930.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@All Rights Preserved 2023" />
+               </children>
+            </AnchorPane>
+         </bottom>
+          </BorderPane>         
+    </children>
+</StackPane>
